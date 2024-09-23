@@ -1,0 +1,624 @@
+.app-container {
+  font-family: Arial, sans-serif;
+  background-color: #F5F7F8;
+  padding: 20px;
+}
+/* Parallax Effect */
+.parallax {
+  background-image: url('path/to/image.jpg'); /* Sesuaikan dengan gambar latar */
+  height: 500px; /* Tinggi yang diinginkan */
+  background-attachment: fixed; /* Efek parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Elemen yang akan di-fade */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Class yang ditambahkan ketika elemen terlihat di layar */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.order-button {
+  background-color: #37B7C3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #40A578;
+  transform: scale(1.05); /* Sedikit membesarkan elemen */
+}
+.car-item {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.car-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+  transform: translateY(-10px); /* Efek naik saat hover */
+}
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.order-button:active {
+  animation: clickEffect 0.3s ease;
+}
+/* Ripple effect style */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: scale(0);
+  width: 100px;
+  height: 100px;
+  animation: rippleEffect 0.6s linear;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+/* Menambahkan transisi pada elemen secara umum */
+.element {
+  transition: all 0.3s ease-in-out;
+}
+
+.element:hover {
+  transform: scale(1.05); /* Efek zoom saat hover */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Efek bayangan */
+}
+
+.navbar {
+  background-color: #ffffff; /* Warna sesuai keinginan */
+  height: 300px; /* Tinggi navbar diperbesar */
+  position: relative;
+}
+
+.navbar-left {
+  position: absolute;
+  top: 20px;
+  left: 40px; /* Menyesuaikan jarak dari kiri */
+}
+
+.navbar-center {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 20px; /* Memastikan teks menu tetap di bagian atas */
+}
+
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 40px; /* Spasi antar item menu */
+}
+
+.navbar-menu li {
+  cursor: pointer;
+  font-size: 1.2em;
+  color: white;
+}
+
+.navbar-menu li:hover {
+  text-decoration: underline;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.car-list ul {
+  display: flex;
+  flex-wrap: wrap; /* Pastikan item bisa membungkus jika terlalu banyak */
+  list-style: none; /* Menghapus bullet points */
+  padding: 0; /* Menghapus padding default */
+}
+
+.car-item {
+  flex: 1 1 30%; /* Atur lebar item menjadi 30% */
+  margin: 10px; /* Jarak antar item */
+}
+
+.car-list h2 {
+  color: #E6FF94; /* Ganti dengan warna yang diinginkan */
+}
+
+.car-list h2 {
+  color: #25743f; /* Ganti dengan warna yang diinginkan */
+  text-align: center; /* Menempatkan teks di tengah */
+  margin-bottom: 20px; /* Jarak bawah untuk memisahkan dari konten lainnya */
+}
+
+.car-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #37B7C3;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.car-image {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.car-info {
+  flex-grow: 1;
+}
+
+.contact-us, .about {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.car-info ul {
+  list-style-type: disc; /* Menggunakan bullet points */
+  padding-left: 20px; /* Memberi jarak antara bullet dan teks */
+}
+
+.car-info ul li {
+  margin-bottom: 5px; /* Memberi jarak antar item */
+}
+.car-info-list {
+  list-style-type: disc; /* Menggunakan bullet points */
+  padding-left: 20px; /* Jarak antara bullet dan teks */
+  margin: 0; /* Hapus margin default */
+}
+
+.car-info-list li {
+  margin-bottom: 5px; /* Jarak antar item */
+}
+
+
+.order-button {
+  background-color: #37B7C3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.order-button:hover {
+  background-color: #088395;
+}
+.order-button {
+  display: flex;
+  align-items: center;
+  background-color: #25D366; /* Warna hijau khas WhatsApp */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #40A578; /* Warna hijau sedikit lebih gelap saat di-hover */
+}
+
+.whatsapp-logo {
+  width: 24px; /* Pastikan ukuran tidak terlalu kecil */
+  height: 24px;
+  margin-right: 8px;
+}
+.note-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.note-text .highlight {
+  color: red;
+}
+.car-price {
+  color: green; /* Ganti warna menjadi hijau */
+  font-size: 1.5em; /* Besarkan ukuran font */
+}
+.car-info h3 {
+  font-size: 1.5em; /* Besarkan ukuran font */
+  margin: 0; /* Hapus margin jika perlu */
+}
+.car-list ul {
+  display: flex; /* Gunakan flexbox */
+  flex-wrap: wrap; /* Izinkan item membungkus ke baris berikutnya jika terlalu banyak */
+  list-style: none; /* Hapus bullet points */
+  padding: 0; /* Hapus padding default */
+}
+
+.car-item {
+  display: flex; /* Gunakan flexbox untuk item mobil */
+  margin: 10px; /* Beri jarak antar item */
+  border: 1px solid #ccc; /* Tambahkan border jika perlu */
+  border-radius: 5px; /* Tambahkan border radius untuk efek rounded */
+  overflow: hidden; /* Cegah gambar meluber */
+  width: calc(33% - 20px); /* Atur lebar item (3 item per baris) */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan shadow untuk efek 3D */
+}
+.car-image-container {
+  width: 100%; /* Pastikan gambar mengisi lebar kontainer */
+  overflow: hidden; /* Cegah gambar meluber */
+}
+
+.car-image {
+  width: 100%; /* Buat gambar responsif */
+  height: auto; /* Jaga proporsi gambar */
+  max-height: 200px; /* Atur tinggi maksimum sesuai kebutuhan */
+  object-fit: cover; /* Sesuaikan gambar agar memenuhi kontainer */
+}
+
+.car-info {
+  padding: 10px; /* Beri padding untuk teks */
+}
+
+.car-info h3 {
+  font-size: 1.5em; /* Besarkan ukuran font untuk nama mobil */
+}
+.car-list ul {
+  display: flex; /* Menggunakan flexbox */
+  flex-wrap: wrap; /* Biarkan item membungkus ke baris berikutnya */
+  list-style: none; /* Menghapus bullet points */
+  padding: 0; /* Menghapus padding default */
+}
+
+.car-item {
+  display: flex; /* Menggunakan flexbox untuk item mobil */
+  flex-direction: column; /* Mengatur arah kolom untuk gambar dan info */
+  margin: 10px; /* Beri jarak antar item */
+  border: 1px solid #ccc; /* Border item */
+  border-radius: 5px; /* Efek rounded */
+  width: calc(33.33% - 20px); /* Setel lebar item (3 item per baris dengan margin) */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.car-image-container {
+  width: 100%; /* Gambar memenuhi lebar kontainer */
+  overflow: hidden; /* Cegah gambar meluber */
+}
+
+.car-image {
+  width: 100%; /* Buat gambar responsif */
+  height: auto; /* Jaga proporsi gambar */
+  max-height: 200px; /* Atur tinggi maksimum */
+  object-fit: cover; /* Sesuaikan gambar agar memenuhi kontainer */
+}
+
+.car-info {
+  padding: 10px; /* Beri padding untuk teks */
+}
+
+.car-info ul {
+  list-style-type: none;  /* Menghilangkan bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.car-info ul li {
+  margin-bottom: 5px;  /* Menambahkan jarak antar item */
+  display: block;  /* Memastikan setiap item berada di baris baru */
+}
+
+
+.map-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.about-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+  padding: 10px;
+}
+
+.about-text p {
+  line-height: 1.8; /* Mengatur jarak antar baris teks */
+  margin-bottom: 20px; /* Memberi jarak antar paragraf */
+}
+
+.about-text p:first-of-type {
+  margin-bottom: 40px; /* Jarak lebih besar antara baris pertama dan kedua */
+}
+
+.about-image-container {
+  flex: 1;
+  padding: 10px;
+}
+
+.about-image {
+  width: 95%;
+  height: auto;
+}
+
+.rental-mobil {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.about h2,
+.contact-us h2 {
+  text-align: center; /* Pusatkan teks judul */
+}
+
+.about p,
+.contact-us p {
+  text-align: light; /* Pusatkan teks paragraf */
+}
+
+.footer {
+  background-color: #080808; /* Sesuaikan warna sesuai skema warna */
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-info, .footer-nav {
+  flex: 1;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  cursor: pointer;
+  color: #9DDE8B; /* Warna link navigasi */
+  margin-bottom: 10px;
+}
+
+.footer-nav ul li:hover {
+  color: #E6FF94; /* Warna saat hover */
+}
+
+.footer h3 {
+  margin-bottom: 15px;
+}
+
+.footer-info {
+  font-size: 0.85em; /* Mengecilkan teks */
+  color: #fff; /* Mengatur warna teks */
+  margin-bottom: 20px;
+}
+
+.footer-info p {
+  margin: 5px 0; /* Mengatur jarak antar paragraf */
+}
+
+.footer-info i {
+  margin-right: 10px; /* Memberi jarak antara ikon dan teks */
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer-info p i {
+  margin-right: 10px;
+  color: #006769; /* Ganti dengan warna sesuai kebutuhan */
+}
+
+.footer-info p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #006769; /* Sesuaikan dengan tema warna */
+  color: white;
+  flex-wrap: wrap;
+}
+
+.footer-info, .footer-nav, .map-container {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.footer-nav ul li:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  flex-basis: 100%;
+  font-size: 0.9em;
+  color: #ccc; /* Warna lebih lembut untuk teks copyright */
+}
+
+.popup-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff; /* Warna hijau khas WhatsApp */
+  color: rgb(0, 0, 0);
+  border-radius: 30px; /* Kurangi radius untuk sudut yang lebih kecil */
+  padding: 8px 15px;  /* Ukuran padding lebih kecil */
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000; /* Agar selalu di atas elemen lainnya */
+  transition: transform 0.3s ease-in-out;
+  font-size: 0.85em; /* Ukuran teks lebih kecil */
+}
+
+.popup-whatsapp:hover {
+  transform: scale(1.1); /* Efek zoom saat di-hover */
+}
+
+.whatsapp-logo-popup {
+  width: 35px; /* Ukuran logo WhatsApp diperbesar */
+  height: 35px;
+  margin-left: 10px; /* Pindahkan logo ke sebelah kanan */
+  margin-right: 0;
+}
+
+.popup-whatsapp p {
+  margin: 0;
+  font-size: 0.9em; /* Ukuran teks diatur lebih kecil */
+  line-height: 1.2; /* Atur jarak baris teks */
+}
+
+.footer .map-container iframe {
+  width: 100%;
+  height: 150px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-info, .footer-nav, .map-container {
+    margin: 0;
+  }
+
+  .footer-nav ul {
+    padding: 0;
+  }
+}
+
+.footer-info h3, .footer-nav h3 {
+  position: relative;
+  margin-bottom: 20px; /* Memberikan jarak di bawah judul */
+  padding-bottom: 5px; /* Sedikit padding bawah agar garis tidak terlalu dekat dengan teks */
+}
+
+.footer-info h3::after, .footer-nav h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Garis tepat di bawah teks */
+  left: 0;
+  width: 100%; /* Lebar garis mengikuti lebar kontainer teks */
+  height: 2px; /* Ketebalan garis */
+  background-color: white; /* Warna garis */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #000000; /* Sesuaikan dengan tema warna */
+  color: white;
+  flex-wrap: wrap;
+}
+
+.footer-info, .footer-nav, .map-container {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.footer-nav ul li:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  flex-basis: 100%;
+  font-size: 0.9em;
+  color: #ccc; /* Warna lebih lembut untuk teks copyright */
+}
+
+.footer .map-container iframe {
+  width: 100%;
+  height: 150px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-info, .footer-nav, .map-container {
+    margin: 0;
+  }
+
+  .footer-nav ul {
+    padding: 0;
+  }
+}
+
+.footer-info i {
+  margin-right: 8px;  /* Jarak antara ikon dan teks */
+  color: #40A578;     /* Warna ikon (ubah sesuai keinginan) */
+}
+
+.footer-info p {
+  display: flex;
+  align-items: center;
+}
